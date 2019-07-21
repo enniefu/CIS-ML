@@ -1,7 +1,7 @@
 import numpy as np
 import readOp
 
-url=r"C:\Users\ENNIE\OneDrive\CIS\gsod_2019\010010-99999-2019.op"
+url=r"D:\010010 1987-2018.txt"
 texts=readOp.readOpcal(url)
 
 X=[]
@@ -16,18 +16,14 @@ for i in range(len(texts)):
             X_tmp.append(texts[j])
         X.append(X_tmp)
 
-# print(X)
-# print(y)
+X=np.array(X)
+y=np.array(y)
 
-for i in X:
-    print(i)
+np.save(r'X.npy',X)
+np.save(r'y.npy',y)
 
-for i in y:
-    print(i)
+X_load=np.load('X.npy')
+y_load=np.load('y.npy')
 
-print(len(y))
-print(len(texts))
-
-print(";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;")
-for i in texts:
-    print(i)
+# print(X_load)
+# print(len(X_load))

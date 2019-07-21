@@ -7,12 +7,14 @@ def readOpcal(url):
     注意，为了方便进行数据处理，
     我删除了本文件的第一行。
     后期如果数据不一样的时候，记得修改。
+
+    已注释
     '''
 
 
     with open(url,'r') as f:
         data = []
-        lines = f.readline() #读第一行，删掉表头
+        # lines = f.readline() #读第一行，删掉表头
         while True:
             lines = f.readline()  # 整行读取数据
             if not lines:
@@ -43,7 +45,7 @@ def readOpcal(url):
         return data
 
 if __name__ == '__main__':
-    url=r"C:\Users\ENNIE\OneDrive\CIS\gsod_2019\010010-99999-2019.op"
+    url=r"D:\010010 1987-2018.txt"
     texts=readOpcal(url)
     for i in texts:
         print(i)
