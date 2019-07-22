@@ -62,10 +62,10 @@ def offer_data(url,X_length,interval,y_length):
 
         X_tmp = []
         y_tmp = []
-        if i + y_length + interval< len(texts) and i + X_length <len(texts):
+        if i + y_length + interval< len(texts) and i+interval+y_length+X_length <len(texts) :
             for j in range(i,i+X_length):
                 X_tmp.append(texts[j])
-            for j in range(i+interval,i+interval+y_length):
+            for j in range(i+interval+X_length,i+interval+y_length+X_length):
                 y_tmp.append(texts[j][0])
             X.append(X_tmp)
             y.append(y_tmp)
@@ -75,11 +75,11 @@ def offer_data(url,X_length,interval,y_length):
 
 if __name__ == '__main__':
     url = r"D:\010010 1987-2018.txt"
-    X,y=offer_data(url,7,0,7)
+    X,y=offer_data(url,1,30,1)
     print(len(X))
-    for text in X:
+    for text in X[:100]:
         print(text)
-    for text in y:
+    for text in y[:100]:
         print(text)
 
 
