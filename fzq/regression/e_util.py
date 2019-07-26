@@ -32,7 +32,7 @@ def read_op_data(url):
             #删除无意义的字段
             process_dataline=[]
             for i in range(len(dataline)):
-                if i not in (0,1,2,4,6,8,10,12,14):
+                if i not in (0,1,2,4,6,8,9,10,12,14,20,21):
                     process_dataline.append(dataline[i])
             data.append(process_dataline)
 
@@ -75,12 +75,13 @@ def offer_data(url,X_length,interval,y_length):
 
 if __name__ == '__main__':
     url = r"D:\010010 1987-2018.txt"
-    X,y=offer_data(url,1,30,1)
+    X,y=offer_data(url,1,0,1)
     print(len(X))
-    for text in X[:100]:
-        print(text)
-    for text in y[:100]:
-        print(text)
-
+    # for text in X[:100]:
+    #     #     print(text)
+    #     # for text in y[:100]:
+    #     #     print(text)
+    print(X[0][0])
+    print(y[0][0])
 
 
