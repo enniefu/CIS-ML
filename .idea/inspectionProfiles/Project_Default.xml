@@ -5,6 +5,7 @@
       <option name="ignoredIdentifiers">
         <list>
           <option value="readOp" />
+          <option value="fzq.regression.nn_with_diverse_data.e_util" />
         </list>
       </option>
     </inspection_tool>
