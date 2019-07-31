@@ -1,20 +1,25 @@
-from data_util import offer_one_day_data
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.tree import DecisionTreeClassifier
 import numpy as np
 
+from data_util import offer_one_day_data,offer_date_whether_rain,offer_rainfall_data
+
 def random_forest(url):
     #获取数据
-    X,y = offer_one_day_data(url)
+    X,y = offer_rainfall_data(url,7,0,7)
+    X,y = offer_date_whether_rain(X,y)
 
     #reshape，处理成sklearn能识别的格式
     X = np.array(X)
     y = np.array(y)
 
-    X.reshape((X.shape[0],-1))
-    y.reshape(-1)
+    X = np.reshape(X,(X.shape[0],-1))
+    y.reshape((y.shape[0],-1))
+
+    print(X.shape)
+    print(y.shape)
 
     #标准化转换
     scaler=StandardScaler()
@@ -36,17 +41,29 @@ def random_forest(url):
     y_test = np.array(y_test)
 
     print("random forest acc : {}".format(np.mean(y_test==prediction)))
+    # print(y_test[0])
+    # print(prediction[0])
+    # print(y_test[1])
+    # print(prediction[1])
+    # print(y_test[2])
+    # print(prediction[2])
+    # for i in range(20):
+    #     print(y_test[i])
 
 def deccision_tree(url):
     #获取数据
-    X,y = offer_one_day_data(url)
+    X,y = offer_rainfall_data(url,7,0,7)
+    X,y = offer_date_whether_rain(X,y)
 
     #reshape，处理成sklearn能识别的格式
     X = np.array(X)
     y = np.array(y)
 
     X.reshape((X.shape[0],-1))
-    y.reshape(-1)
+    y.reshape((y.shape[0],-1))
+
+    print(X.shape)
+    print(y.shape)
 
     #标准化转换
     scaler=StandardScaler()
@@ -71,8 +88,11 @@ def deccision_tree(url):
 
 
 
+
 if __name__ == '__main__':
     url = r"D:/weatherAUS.csv"
-    deccision_tree(url)
     random_forest(url)
 
+
+
+    #连续预测7天是否下雨
