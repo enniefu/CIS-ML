@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e15604b2-120a-4084-8933-7f2e9d208f79" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/fzq/weather_predict_AUC/test.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/fzq/weather_predict_AUC/01_rain_or_not.py" beforeDir="false" afterPath="$PROJECT_DIR$/fzq/weather_predict_AUC/01_rain_or_not.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/fzq/weather_predict_AUC/data_util.py" beforeDir="false" afterPath="$PROJECT_DIR$/fzq/weather_predict_AUC/data_util.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fzq/weather_predict_before/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/fzq/weather_predict_before/test.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -18,8 +18,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/fzq/weather_predict_AUC/data_util.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1231">
-              <caret line="83" lean-forward="true" selection-start-line="83" selection-end-line="83" />
+            <state relative-caret-position="2717">
+              <caret line="157" column="13" lean-forward="true" selection-start-line="157" selection-start-column="13" selection-end-line="157" selection-end-column="13" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
@@ -27,20 +27,15 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/fzq/weather_predict_before/test.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="207">
-              <caret line="9" column="12" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/fzq/weather_predict_AUC/01_rain_or_not.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1207">
-              <caret line="95" lean-forward="true" selection-start-line="95" selection-end-line="95" />
+            <state relative-caret-position="264">
+              <caret line="114" column="59" lean-forward="true" selection-start-line="114" selection-start-column="59" selection-end-line="114" selection-end-column="59" />
+              <folding>
+                <element signature="e#0#52#0" expanded="true" />
+                <element signature="e#395#1362#0" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -82,22 +77,22 @@
         <option value="$PROJECT_DIR$/fzq/programming_hw/hw_util.py" />
         <option value="$PROJECT_DIR$/fzq/programming_hw/hw2_Naive_Bayes.py" />
         <option value="$PROJECT_DIR$/fzq/weather_predict_before/test.py" />
-        <option value="$PROJECT_DIR$/fzq/weather_predict_AUC/01_rain_or_not.py" />
+        <option value="$PROJECT_DIR$/fzq/weather_predict_AUC/test.py" />
         <option value="$PROJECT_DIR$/fzq/weather_predict_AUC/data_util.py" />
+        <option value="$PROJECT_DIR$/fzq/weather_predict_AUC/01_rain_or_not.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-9" />
-    <option name="width" value="978" />
-    <option name="height" value="1089" />
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="-10" />
+    <option name="width" value="980" />
+    <option name="height" value="1090" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -116,23 +111,11 @@
               <item name="fzq" type="462c0819:PsiDirectoryNode" />
               <item name="weather_predict_AUC" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="CIS-ML" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CIS-ML" type="462c0819:PsiDirectoryNode" />
-              <item name="fzq" type="462c0819:PsiDirectoryNode" />
-              <item name="weather_predict_before" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="CIS-ML" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CIS-ML" type="462c0819:PsiDirectoryNode" />
-              <item name="fzq" type="462c0819:PsiDirectoryNode" />
-              <item name="weather_predict_before" type="462c0819:PsiDirectoryNode" />
-              <item name="regression" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -233,7 +216,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="hw2_Naive_Bayes" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="test (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="CIS-ML" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -241,12 +224,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/fzq/programming_hw" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/fzq/weather_predict_AUC" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/fzq/programming_hw/hw2_Naive_Bayes.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/fzq/weather_predict_AUC/test.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -281,9 +264,9 @@
       <list>
         <item itemvalue="Python.01_rain_or_not" />
         <item itemvalue="Python.data_util" />
+        <item itemvalue="Python.test (1)" />
         <item itemvalue="Python.test" />
         <item itemvalue="Python.hw2_Naive_Bayes (1)" />
-        <item itemvalue="Python.hw2_Naive_Bayes" />
       </list>
     </recent_temporary>
   </component>
@@ -317,11 +300,13 @@
       <workItem from="1564366258471" duration="6394000" />
       <workItem from="1564452357128" duration="19655000" />
       <workItem from="1564498056359" duration="2612000" />
+      <workItem from="1564535945639" duration="5590000" />
+      <workItem from="1564556330795" duration="8192000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="81019000" />
+    <option name="totallyTimeSpent" value="94801000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -333,14 +318,14 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="878" extended-state="6" />
+    <frame x="-7" y="-7" width="1550" height="878" extended-state="7" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.09919571" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.308311" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4995618" weight="0.32841823" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49865952" visible="true" weight="0.23190348" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3994638" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -348,13 +333,13 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.3297587" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5004382" side_tool="true" weight="0.66169155" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5013405" side_tool="true" weight="0.40884718" />
       <window_info anchor="bottom" id="Terminal" order="11" weight="0.7922252" />
       <window_info anchor="bottom" id="Python Console" order="12" weight="0.3297587" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="SciView" order="3" weight="0.8820375" />
+      <window_info anchor="right" id="SciView" order="3" visible="true" weight="0.5958445" />
       <window_info anchor="right" id="Database" order="4" />
     </layout>
     <layout-to-restore>
@@ -391,13 +376,13 @@
     <SUITE FILE_PATH="coverage/CIS_ML$hw_util.coverage" NAME="hw_util Coverage Results" MODIFIED="1564385174101" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/fzq/programming_hw" />
     <SUITE FILE_PATH="coverage/CIS_ML$save_as_npy.coverage" NAME="save_as_npy Coverage Results" MODIFIED="1563697901355" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/fzq" />
     <SUITE FILE_PATH="coverage/CIS_ML$hw_2_programming.coverage" NAME="hw 2 programming Coverage Results" MODIFIED="1564327443160" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/fzq/programming_hw" />
-    <SUITE FILE_PATH="coverage/CIS_ML$data_util.coverage" NAME="data_util Coverage Results" MODIFIED="1564501214191" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/fzq/weather_predict_AUC" />
+    <SUITE FILE_PATH="coverage/CIS_ML$data_util.coverage" NAME="data_util Coverage Results" MODIFIED="1564563873748" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/fzq/weather_predict_AUC" />
     <SUITE FILE_PATH="coverage/CIS_ML$e_util.coverage" NAME="e_util Coverage Results" MODIFIED="1563715646691" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/fzq/data_util" />
     <SUITE FILE_PATH="coverage/CIS_ML$readOp.coverage" NAME="readOp Coverage Results" MODIFIED="1563697897309" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/fzq" />
-    <SUITE FILE_PATH="coverage/CIS_ML$test__1_.coverage" NAME="test (1) Coverage Results" MODIFIED="1563696250061" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/CIS_ML$e_util__1_.coverage" NAME="e_util (1) Coverage Results" MODIFIED="1564127107798" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/fzq/regression" />
+    <SUITE FILE_PATH="coverage/CIS_ML$test__1_.coverage" NAME="test (1) Coverage Results" MODIFIED="1564559450590" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/fzq/weather_predict_AUC" />
     <SUITE FILE_PATH="coverage/CIS_ML$nn_with_diverse_data.coverage" NAME="nn_with_diverse_data Coverage Results" MODIFIED="1564234563252" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/fzq/regression" />
-    <SUITE FILE_PATH="coverage/CIS_ML$01_rain_or_not.coverage" NAME="01_rain_or_not Coverage Results" MODIFIED="1564501315478" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/fzq/weather_predict_AUC" />
+    <SUITE FILE_PATH="coverage/CIS_ML$01_rain_or_not.coverage" NAME="01_rain_or_not Coverage Results" MODIFIED="1564567246874" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/fzq/weather_predict_AUC" />
     <SUITE FILE_PATH="coverage/CIS_ML$test.coverage" NAME="test Coverage Results" MODIFIED="1564492911105" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/fzq/weather_predict_before" />
   </component>
   <component name="editorHistoryManager">
@@ -593,20 +578,53 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$USER_HOME$/.PyCharm2019.1/system/python_stubs/1263690247/numpy/core/multiarray.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="107">
+          <caret line="4304" column="8" selection-start-line="4304" selection-start-column="8" selection-end-line="4304" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fzq/weather_predict_AUC/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="9" column="18" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/fzq/weather_predict_AUC/data_util.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1231">
-          <caret line="83" lean-forward="true" selection-start-line="83" selection-end-line="83" />
+        <state relative-caret-position="2717">
+          <caret line="157" column="13" lean-forward="true" selection-start-line="157" selection-start-column="13" selection-end-line="157" selection-end-column="13" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/fzq/weather_predict_AUC/jueceshu.dot">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-268684" />
+      </provider>
+    </entry>
+    <entry file="file://C:/ProgramData/Anaconda3/envs/working/Lib/site-packages/sklearn/tree/export.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="107">
+          <caret line="305" selection-start-line="305" selection-end-line="305" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/fzq/weather_predict_AUC/01_rain_or_not.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1207">
-          <caret line="95" lean-forward="true" selection-start-line="95" selection-end-line="95" />
+        <state relative-caret-position="264">
+          <caret line="114" column="59" lean-forward="true" selection-start-line="114" selection-start-column="59" selection-end-line="114" selection-end-column="59" />
+          <folding>
+            <element signature="e#0#52#0" expanded="true" />
+            <element signature="e#395#1362#0" />
+          </folding>
         </state>
       </provider>
     </entry>

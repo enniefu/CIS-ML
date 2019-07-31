@@ -56,47 +56,35 @@ def read_data(url):
     #读取日期信息并添加one-hot月份的特征     一共12个
 
     #删除日期信息
-    df.drop(['Date','RainTomorrow'], axis=1, inplace=True)
-
-
+    # 'Date',
+    df.drop(['RainTomorrow','Date','RISK_MM'], axis=1, inplace=True)
 
     return df
 
-
-def offer_one_day_data(url):
-    df = read_data(url)
-
-    #获取X，y
-    y = df['RainTomorrow']
-    X = df.drop(['RainTomorrow','Date'], axis=1)
-
-    return X,y
-
 def offer_rainfall_data(url,X_length,interval,y_length):
     texts = read_data(url)
-    texts  =texts.fillna('两开花')
+    texts  =texts.fillna(114514)
 
     texts = texts.values
 
     X = []
     y = []
 
-
-
     # 试图使用7天之前的数据来预测平均温度
-    for i in range(len(texts)):
+    for i in range(len(texts)-X_length-interval-y_length):
 
         X_tmp = []
         y_tmp = []
-        if i + y_length + interval< len(texts) and i+interval+y_length+X_length <len(texts) :
-            for j in range(i,i+X_length):
-                X_tmp.append(texts[j])
-            for j in range(i+interval+X_length,i+interval+y_length+X_length):
 
-                #取自己想要的数据
-                y_tmp.append(texts[j][2])
-            X.append(X_tmp)
-            y.append(y_tmp)
+        for j in range(i,i+X_length):
+            X_tmp.append(texts[j])
+        for j in range(i+interval+X_length,i+interval+y_length+X_length):
+
+            #取自己想要的数据
+            y_tmp.append(texts[j][2])
+        X.append(X_tmp)
+        y.append(y_tmp)
+
 
 
     X_pro = []
@@ -107,21 +95,22 @@ def offer_rainfall_data(url,X_length,interval,y_length):
         flag = 0
         for day_data in X[i]:
             for x in day_data:
-                if x == '两开花':
+                if x == 114514:
                     flag=1
                     break
 
         for day_data in y[i]:
-            if isinstance(day_data,str):
-                if day_data == '两开花':
-                    flag=1
-                    break
+            if day_data == 114514:
+                flag=1
+                break
 
         if flag == 0:
             X_pro.append(X[i])
             y_pro.append(y[i])
 
-
+    # print(X_pro[0])
+    # print(y_pro[0])
+    # exit(0)
 
     return X_pro,y_pro
 
@@ -140,7 +129,15 @@ def offer_date_whether_rain(X,y):
     for i,j in zip(ans[0],ans[1]):
         y_pro[i][j] = 1
 
+    X = np.array(X)
+    X = np.reshape(X,(X.shape[0],-1))
+    y_pro = y_pro.ravel()
+
+
+
     return X,y_pro
+
+
 
 
 
@@ -150,15 +147,13 @@ if __name__ == '__main__':
     pd.set_option('display.max_colwidth', 1000)
 
     url = r"D:/weatherAUS.csv"
+
+    # X,y = offer_rainfall_data(url,7,0,1)
+    # print(X[0])
+    # print(y[0])
+    #
+
+
     df = read_data(url)
     print(df)
-
-
-
-    X,y = offer_rainfall_data(url,3,20,5)
-    print(X[0])
-    print(y[0])
-    #
-    X, y = offer_date_whether_rain(X, y)
-    print(y[0])
 
