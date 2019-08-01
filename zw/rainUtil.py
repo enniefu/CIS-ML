@@ -2,22 +2,35 @@ import numpy as np # linear algebra
 import pandas as pd # data processing, CSV file I/O (e.g. pd.read_csv)
 from keras.utils import normalize
 from scipy import stats
+from sklearn.feature_selection import SelectKBest, chi2
+from sklearn import preprocessing
+import seaborn as sns
+import matplotlib.pyplot as plt
 pd.set_option('display.max_columns', 1000)
 pd.set_option('display.width', 1000)
 pd.set_option('display.max_colwidth', 1000)
-def offerData(url, label = "RainTomorrow", removeCol = False, location = "", removeOutliers = False, intervals = 1):
+def offerData(url, label = "RainTomorrow", removeCol = False, location = "", removeOutliers = False, intervals = 1, selectK = 1):
     df = pd.read_csv(url)
-    # print('Size of weather data frame is :',df.shape)
+    print('Size of weather data frame is :',df.shape)
 
-    # #增加几天后下雨的真实label
+    # countYes = 0
+    # countNo = 0
+    # for i in range(len(df['RainTomorrow'])):
+    #     if (df['RainTomorrow'][i] == 'Yes') :
+    #         countYes = countYes + 1
+    #     else:
+    #         countNo = countNo + 1
+    #
+    # print(countYes)
+    # print(countNo)
+
+    #增加几天后下雨的真实label
     # RainTwoDay = []
     # RainThreeDay = []
     # RainFourDay = []
     # RainFiveDay = []
     # RainSixDay = []
     # RainSevenDay = []
-    # Month = []
-    # print(len(df['RainToday']))
     # for i in range(len(df['RainToday'])):
     #     if i + 1 >= len(df['RainToday']):
     #         RainTwoDay.append(np.nan)
@@ -77,19 +90,26 @@ def offerData(url, label = "RainTomorrow", removeCol = False, location = "", rem
     #     else:
     #         RainSevenDay.append(np.nan)
     #
-    #
     # df['RainTwoDay'] = RainTwoDay
     # df['RainThreeDay'] = RainThreeDay
     # df['RainFourDay'] = RainFourDay
     # df['RainFiveDay'] = RainFiveDay
     # df['RainSixDay'] = RainSixDay
     # df['RainSevenDay'] = RainSevenDay
-    #
-    # df = df.fillna('NA')
-    #
-    # df.to_csv('./newWeatherAUS.csv')
 
-    RainTwoDay = []
+    #增加一个Month的label
+    Month = []
+
+    for i in range(len(df['Date'])):
+        Month.append(int(df['Date'][i][5:7]))
+
+    df['Month'] = Month
+
+    df = df.dropna(how='any')
+
+    print('Size of weather data frame is :', df.shape)
+
+    # df.to_csv('./newWeatherAUS.csv')
     # if (intervals > 1):
     #     for i in range(len(texts)):
     #         X_tmp = []
@@ -114,6 +134,13 @@ def offerData(url, label = "RainTomorrow", removeCol = False, location = "", rem
     df['RainToday'].replace({'No': 0, 'Yes': 1}, inplace=True)
     df['RainTomorrow'].replace({'No': 0, 'Yes': 1}, inplace=True)
 
+    # df['RainTwoDay'].replace({'No': 0, 'Yes': 1}, inplace=True)
+    # df['RainThreeDay'].replace({'No': 0, 'Yes': 1}, inplace=True)
+    # df['RainFourDay'].replace({'No': 0, 'Yes': 1}, inplace=True)
+    # df['RainFiveDay'].replace({'No': 0, 'Yes': 1}, inplace=True)
+    # df['RainSixDay'].replace({'No': 0, 'Yes': 1}, inplace=True)
+    # df['RainSevenDay'].replace({'No': 0, 'Yes': 1}, inplace=True)
+
     if location != "":
         df = df
 
@@ -135,13 +162,33 @@ def offerData(url, label = "RainTomorrow", removeCol = False, location = "", rem
 
     df.reset_index(drop=True, inplace=True)
 
-    X = df.drop('RainTomorrow', axis=1)
+    # y_RainToday = df['RainToday']
+    # y_RainTwoDay = df['RainTwoDay']
+    # y_RainThreeDay = df['RainThreeDay']
+    # y_RainFourDay = df['RainFourDay']
+    # y_RainFiveDay = df['RainFiveDay']
+    # y_RainSixDay = df['RainSixDay']
+    # y_RainSevenDay = df['RainSevenDay']
+
+    # scaler = preprocessing.MinMaxScaler()
+    # scaler.fit(df)
+    # df = pd.DataFrame(scaler.transform(df), index=df.index, columns=df.columns)
+
+    X = df.drop(['RainTomorrow'], axis=1)
+
+    # X = df.drop(['RainTomorrow', 'RainThreeDay', 'RainTwoDay', 'RainFourDay', 'RainFiveDay', 'RainSixDay',
+    #              'RainSevenDay'], axis=1)
+
+    X = X.loc[:, ]
+    X = df["Rainfall"]
     y = df[label]
+    # selector = SelectKBest(chi2, k=selectK)
+    # selector.fit(X, y)
+    # print(selector)
+    # X_new = selector.transform(X)
+    # print(X.columns[selector.get_support(indices=True)])  # top 3 columns
 
-    X = X.values
-    X = normalize(X)
-
-    return X,y
+    return X, y#, y_RainToday, y_RainTwoDay, y_RainThreeDay, y_RainFourDay, y_RainFiveDay, y_RainSixDay, y_RainSevenDay
 
 if __name__ == '__main__':
     offerData('./weatherAUS.csv')
